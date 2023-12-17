@@ -6,12 +6,13 @@ router.post('/register',async (req, res)=>{
     const user = req.body;
     const userExists = await Users.findOne({username:user.username});
     console.log(userExists)
-    if(userExists) return res.send(`User with ${user.username} email already exists`);
+    if(userExists) return res.send(`User with ${user.username} username already exists`);
     
     try{
         const newUser = Users(user);
         await newUser.save();
     }catch(err){
+        console.log(err)
         return res.send("User not saved due to problem in server")
     }
     res.end("User saved");

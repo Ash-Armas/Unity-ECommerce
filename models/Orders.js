@@ -2,8 +2,14 @@ const mongoose = require('mongoose');
 const Products = require('./Products');
 
 var ordersSchema = mongoose.Schema({
+   buyer_id:{
+      type:String
+   },
+   seller_id:{
+      type:String
+   },
    products:{
-    type:[Products],
+    type:[String],
     default:[]
    }
 })

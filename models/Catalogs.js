@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
+const {Products} = require('./Products');
 
 var catalogSchema = mongoose.Schema({
-    name:{
+    seller_id:{
         type:String,
         required:true
     },
-    price:{
-        type:BigInt,
-        require:true
-    }
+    products: [String]
 })
 module.exports = mongoose.model('Catalogs',catalogSchema);

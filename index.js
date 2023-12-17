@@ -7,7 +7,7 @@ const buyerRoutes = require('./api/buyer');
 const sellerRoutes = require('./api/seller');
 const auth = require('./api/auth');
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use('/api/auth', auth)
