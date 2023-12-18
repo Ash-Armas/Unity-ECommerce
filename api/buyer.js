@@ -6,7 +6,7 @@ const Products = require('../models/Products');
 const Orders = require('../models/Orders');
 
 router.get('/list-of-sellers',async (req, res)=>{
-    const sellers = await Users.find({seller:false});
+    const sellers = await Users.find({seller:true});
     res.send(sellers)
 })
 

@@ -16,4 +16,4 @@ app.use('/api/seller', sellerRoutes)
 
 app.listen(PORT, ()=>{
     console.log("Server started at port", PORT);
-})
+});
